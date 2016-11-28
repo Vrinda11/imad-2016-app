@@ -16,15 +16,14 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
     });
 
-app.get('ui/article-one.html');
-app.get('ui/article-two.html');
 
-app.get('/article-one',function(req,res){
+
+app.get('ui/article-one.html',function(req,res){
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 }
 );
 
-app.get('/article-two',function(req,res){
+app.get('ui/article-two.html',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 }
 );
